@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/data/home/cuthbertcai/programs/DiaVL/')
+sys.path.append('../')
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import numpy as np
