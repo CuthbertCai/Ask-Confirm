@@ -1,9 +1,10 @@
 import sys
-sys.path.append('../')
+sys.path.append('./')
 import torch
 import random
 from torch.utils.data import DataLoader
 import numpy as np
+import os.path as osp
 
 from train.trainer_txt_img_matching import TextImageMatchingTrainer
 from utils.vocab import Vocabulary
@@ -29,7 +30,7 @@ def main(config, split):
 
     all_img_feats = all_img_feats.cpu().numpy()
 
-    np.save('../data/caches/vg_%s_img_feat.npy' %split, all_img_feats)
+    np.save(osp.join(config.data_dir, 'caches/vg_%s_img_feat.npy' %split), all_img_feats)
 
 if __name__ == '__main__':
     config, unparsed = get_test_config()

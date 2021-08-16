@@ -2,7 +2,7 @@
 
 import os, sys, cv2, json
 
-sys.path.append('../')
+sys.path.append('./')
 import random, pickle, math
 import numpy as np
 import os.path as osp
