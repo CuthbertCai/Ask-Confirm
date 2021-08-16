@@ -11,8 +11,8 @@ from utils.config import get_test_config
 from datasets.vg import vg
 from datasets.loader import region_loader, region_collate_fn
 
-def main(config):
-    train_db = vg(config, 'test')
+def main(config, split):
+    train_db = vg(config, split)
     trainer = ImageAttributeTrainer(config)
     all_img_logits = []
     trainer.net.eval()
@@ -29,7 +29,7 @@ def main(config):
 
     all_img_logits = all_img_logits.cpu().numpy()
 
-    np.save('../data/caches/vg_test_img_logits.npy', all_img_logits)
+    np.save('../data/caches/vg_%s_img_logits.npy' %split, all_img_logits)
 
 if __name__ == '__main__':
     config, unparsed = get_test_config()
@@ -38,4 +38,5 @@ if __name__ == '__main__':
     torch.manual_seed(config.seed)
     if config.cuda:
         torch.cuda.manual_seed_all(config.seed)
-    main(config)
+    main(config, 'train')
+    main(config, 'test')

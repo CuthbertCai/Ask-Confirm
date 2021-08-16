@@ -11,8 +11,8 @@ from utils.config import get_test_config
 from datasets.vg import vg
 from datasets.loader import region_loader, region_collate_fn
 
-def main(config):
-    train_db = vg(config, 'test')
+def main(config, split):
+    train_db = vg(config, split)
     trainer = TextImageMatchingGlobalTrainer(config)
     all_img_feats = []
     trainer.net.eval()
@@ -29,7 +29,7 @@ def main(config):
 
     all_img_feats = all_img_feats.cpu().numpy()
 
-    np.save('../data/caches/vg_test_img_feat_global.npy', all_img_feats)
+    np.save('../data/caches/vg_%s_img_feat_global.npy' %split, all_img_feats)
 
 if __name__ == '__main__':
     config, unparsed = get_test_config()
@@ -38,4 +38,5 @@ if __name__ == '__main__':
     torch.manual_seed(config.seed)
     if config.cuda:
         torch.cuda.manual_seed_all(config.seed)
-    main(config)
+    main(config, 'train')
+    main(config, 'test')
