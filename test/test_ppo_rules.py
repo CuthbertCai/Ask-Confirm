@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/home/cgy/programs/DiaVL')
+sys.path.append('../')
 import numpy as np
 import torch
 

@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/data/home/cuthbertcai/programs/DiaVL/')
+sys.path.append('../')
 import random
 import numpy as np
 
