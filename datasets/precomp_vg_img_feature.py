@@ -29,7 +29,7 @@ def main(config):
 
     all_img_feats = all_img_feats.cpu().numpy()
 
-    np.save('./data/caches/vg_test_img_feat.npy', all_img_feats)
+    np.save('../data/caches/vg_test_img_feat.npy', all_img_feats)
 
 if __name__ == '__main__':
     config, unparsed = get_test_config()

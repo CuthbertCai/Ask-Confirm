@@ -29,7 +29,7 @@ def main(config):
 
     all_img_logits = all_img_logits.cpu().numpy()
 
-    np.save('./data/caches/vg_test_img_logits.npy', all_img_logits)
+    np.save('../data/caches/vg_test_img_logits.npy', all_img_logits)
 
 if __name__ == '__main__':
     config, unparsed = get_test_config()

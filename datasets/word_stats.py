@@ -37,7 +37,7 @@ def stat(loaddbs, config):
     # for w in words:
     #     word2idx[w] = count
     #     count += 1
-    with open(osp.join('/data/home/cuthbertcai/programs/DiaVL/data/caches/vg_vocab_14284.pkl'), 'rb') as fid:
+    with open(osp.join('../data/caches/vg_vocab_14284.pkl'), 'rb') as fid:
         lang_vocab = pickle.load(fid)
 
     word_num = len(lang_vocab)
@@ -56,7 +56,7 @@ def stat(loaddbs, config):
             for word in words:
                 if word in lang_vocab.word2idx.keys():
                     idx2obj[lang_vocab.word2idx[word]][obj_ind] += 1
-    file_path = '/data/home/cuthbertcai/programs/DiaVL/data/caches/vg_word_stat.npy'
+    file_path = '../data/caches/vg_word_stat.npy'
     np.save(file_path, idx2obj)
 def main():
     config, unparsed = get_train_config()
