@@ -67,10 +67,11 @@ This repo was borrowed from:
 
 ## Citation
 ```
-@inproceedings{cai2021ask,  
-  title={Ask&Confirm: Active Detail Enriching for Cross-Modal Retrieval with Partial Query},  
-  author={Guanyu Cai, Jun Zhang, Xinyang Jiang, Yifei Gong, Lianghua He, Fufu yu, Pai Peng, Xiaowei Guo, Feiyue Huang, Xing Sun},  
-  booktitle={ICCV},  
-  year={2021}  
+@inproceedings{cai2021ask,
+  title={Ask\&Confirm: Active Detail Enriching for Cross-Modal Retrieval With Partial Query},
+  author={Cai, Guanyu and Zhang, Jun and Jiang, Xinyang and Gong, Yifei and He, Lianghua and Yu, Fufu and Peng, Pai and Guo, Xiaowei and Huang, Feiyue and Sun, Xing},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={1835--1844},
+  year={2021}
 }
 ```
