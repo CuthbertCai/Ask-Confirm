@@ -28,7 +28,7 @@ Download `DrillDown/data/caches` from [DrillDown][1] and put the directory under
 `sh scripts/precomp_vg_attr_feature.sh`  
 
 4. Get word statistics
-`cd datasets && python word_stats.py`
+`cd datasets && python word_stats.py`  
 **Please replace all paths in the scripts to your own paths.**  
 
 
