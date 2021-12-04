@@ -57,7 +57,7 @@ def main(config):
         attrs = np.array(id2attr[key])
         attr = np.mean(attrs, axis=0)
         attr_feat[key] = attr
-    np.save(osp.join(config.data_dir, 'caches/vg_attr_feat.npy', attr_feat))
+    np.save(osp.join(config.data_dir, 'caches/vg_attr_feat.npy'), attr_feat)
 
 if __name__ == '__main__':
     config, unparsed = get_test_config()
