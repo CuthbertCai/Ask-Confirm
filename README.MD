@@ -25,6 +25,9 @@ Download `DrillDown/data/caches` from [DrillDown][1] and put the directory under
 `sh scripts/precomp_vg_img_feature.sh` for S-SCAN  
 `sh scripts/precomp_vg_img_feature_global.sh` for T-CMPL  
 `sh scripts/precomp_vg_img_logits.sh`  
+
+4. Get word statistics
+`cd datasets && python word_stats.py`
 **Please replace all paths in the scripts to your own paths.**  
 
 
