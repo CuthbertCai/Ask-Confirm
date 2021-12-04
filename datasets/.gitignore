@@ -1,6 +1,5 @@
 __pycache__/
 .loader_yf.py.swp
-precomp_vg_attr_feature.py
 precomp_vg_attr_img_feature.py
 loader_yf.py
 caption_template.py
